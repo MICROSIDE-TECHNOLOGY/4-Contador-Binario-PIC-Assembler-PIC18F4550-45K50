@@ -47,7 +47,6 @@ Temporary Items
 *.mcw
 *.p1
 *.cof
-*.hex
 *.sym
 *.map
 *.hxl
