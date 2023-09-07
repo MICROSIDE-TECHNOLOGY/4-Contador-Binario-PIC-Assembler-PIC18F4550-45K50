@@ -1,0 +1,31 @@
+on: [push]
+
+jobs:
+  gist-sync:
+    name: gist-sync
+    runs-on: ubuntu-latest
+    steps:
+    #PIC18F4550
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: vhperaltaj/gist-sync-action@v1.0.0
+        id: PIC18F4550
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/microside-mx/ffc7e4e523443644bda87091a8d078fe
+          gist_title: Práctica 4 - Contador Binario MPLAB X PIC assembler PIC18F4550
+          gist_description: Prácticas PIC Assembler
+          github_file: Proyecto/PIC18F4550/Contador_binario.X/contador_binario.s
+          file_encoding: ISO-8859-1
+    #PIC18F45K50
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: vhperaltaj/gist-sync-action@v1.0.0
+        id: PIC18F45K50
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/microside-mx/abf6485f51da346dc2edf720509f0609
+          gist_title: Práctica 4 - Contador Binario MPLAB X PIC assembler PIC18F45K50
+          gist_description: Prácticas PIC Assembler
+          github_file: Proyecto/PIC18F45K50/Contador_binario.X/contador_binairo.s
+          file_encoding: ISO-8859-1
